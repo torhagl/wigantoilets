@@ -1,0 +1,238 @@
+.centered-50 {
+    width: 50%;
+    margin: auto;
+    float: top;
+    z-index: 20;
+    position: relative;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="centered-"] {
+        width: 90%;
+        margin: auto;
+        float: top;
+        z-index: 20;
+        position: relative;
+    }
+}
+
+.pad-1 {
+    padding: 1em;
+}
+
+.z-index-bg {
+    z-index: 1;
+    position: absolute;
+    background-repeat: repeat;
+}
+
+body {
+}
+
+.alternative {
+  border-bottom: 1px solid rgba(88,88,88,1);
+  padding: 0.5em;
+}
+
+.restricted-width{
+    display: inline-block;
+    float: left;
+    position: fixed;
+    background-color: lightgoldenrodyellow;
+    z-index: 25;
+}
+
+.rotate-0{
+
+}
+
+.rotate-20{
+    -ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Chrome, Safari, Opera */
+    transform: rotate(20deg);
+}
+
+.rotate-40{
+    -ms-transform: rotate(40deg); /* IE 9 */
+    -webkit-transform: rotate(40deg); /* Chrome, Safari, Opera */
+    transform: rotate(40deg);
+}
+
+.rotate-70{
+    -ms-transform: rotate(70deg); /* IE 9 */
+    -webkit-transform: rotate(70deg); /* Chrome, Safari, Opera */
+    transform: rotate(70deg);
+}
+
+.rotate-90{
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
+
+.rotate-140{
+    -ms-transform: rotate(140deg); /* IE 9 */
+    -webkit-transform: rotate(140deg); /* Chrome, Safari, Opera */
+    transform: rotate(140deg);
+}
+
+.rotate-180{
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+.rotate-220{
+    -ms-transform: rotate(220deg); /* IE 9 */
+    -webkit-transform: rotate(220deg); /* Chrome, Safari, Opera */
+    transform: rotate(220deg);
+}
+
+.rotate-270{
+    -ms-transform: rotate(270deg); /* IE 9 */
+    -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
+    transform: rotate(270deg);
+}
+
+.rotate-300{
+    -ms-transform: rotate(300deg); /* IE 9 */
+    -webkit-transform: rotate(300deg); /* Chrome, Safari, Opera */
+    transform: rotate(300deg);
+}
+
+.rotate-330{
+    -ms-transform: rotate(330deg); /* IE 9 */
+    -webkit-transform: rotate(330deg); /* Chrome, Safari, Opera */
+    transform: rotate(330deg);
+}
+
+/* ----------- */
+/* GRID SYSTEM */
+/* ----------- */
+/* The grid system is based on a 12 column percentage/responsive layout.
+Add the .col-'1-12' classes to an HTML element to define it's size.
+.col-12 will take up 100% of the screen width, .col-6 takes up 50% etc. */
+
+
+.grid{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.grid:before,.grid:after,.row:before,.row:after{
+    content: " ";
+    display: table;
+}
+
+.grid:after,.row:after{
+    clear: both;
+}
+
+h1 a {
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 0.5em;
+
+}
+
+[class*='col-']{
+    width: 100%;
+    float: left;
+    text-align: center;
+
+}
+
+input {
+  width: 100%;
+  height: 3em;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: rgba(88,88,88,1);
+  text-align: center;
+}
+
+.col{ /* Styles divs with white backgrounds */
+    padding: 0.5em;
+    margin: 1px;
+    color: rgba(88,88,88,1);
+    text-align: center;
+}
+
+.col-1{width: 8.33333%;}
+.col-2{width: 16.66667%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33333%;}
+.col-5{width: 41.66667%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33333%;}
+.col-8{width: 66.66667%;}
+.col-9{width: 75%;}
+.col-10{width: 83.33333%;}
+.col-11{width: 91.66667%;}
+.col-12{width: 100%;}
+
+/* --------------- */
+/* ELEMENT STYLING */
+/* --------------- */
+
+html{
+    font-size: 20px;
+    box-sizing: border-box;
+
+}
+
+h1 {
+    font-size: 1.7em;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    margin: 0;
+}
+
+img { /* Prevents images breaking the grid */
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+*, *:before, *:after { /* All elements vill inherit the 'box-sizing' property */
+    box-sizing: inherit;
+}
+
+/* ------------- */
+/* CLASS STYLING */
+/* ------------- */
+
+.invert:hover{ /* Hover animation for nav-buttons */
+    transition: background-color 0.5s ease;
+    background: black;
+    color: white;
+    cursor: pointer; /* Prevents'text' cursor on buttons */
+    user-select: none; /* Prevents text from being selected */
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    -o-user-select: none; /* Opera*/
+
+}
+
+.moveup { /* Adjusts the tagline closer to logo */
+    position: relative;
+    top: -30px;
+}
+
+.aligntext { /* Aligns the logoText */
+    color: antiquewhite;
+    margin-left: 2%;
+}
+
+/* --------------- */
+/* MEDIA QUERRIES  */
+/* can be found in */
+/* a seperate CSS  */
+/* document.       */
+/* --------------- */
