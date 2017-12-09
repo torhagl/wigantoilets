@@ -131,11 +131,6 @@ createToiletCard toilet =
         ]
 
 
-searchFilterTowns : String -> Welcome -> Html Msg
-searchFilterTowns input db =
-    div [] (List.map (\y -> div [] [ Html.text <| toSentenceCase y.purpleProperties.tOWN, Html.text <| toSentenceCase y.purpleProperties.cOMMENTS ]) <| regexTowns input db.features)
-
-
 regexTowns : String -> List Feature -> List Feature
 regexTowns input toilets =
     List.filter (\y -> Regex.contains (Regex.caseInsensitive <| Regex.regex <| "^" ++ input) y.purpleProperties.tOWN) toilets
