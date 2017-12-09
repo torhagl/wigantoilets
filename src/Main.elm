@@ -108,7 +108,12 @@ createToiletCard toilet =
                 [ Card.text [] [ text <| "Address: " ++ toilet.purpleProperties.sTREET ++ ", " ++ toilet.purpleProperties.tOWN ]
                 , Card.text [] [ text <| "Managed by: " ++ toilet.purpleProperties.mANAGEDBY ]
                 , Card.text [] [ text <| "Status: " ++ toilet.purpleProperties.sTATUS ]
-                , Card.text [] [ text <| "Used: " ++ toilet.purpleProperties.uSED ]
+                , Card.text []
+                    [ if toilet.purpleProperties.uSED == " " then
+                        text "Used: No information provided."
+                      else
+                        text <| "Used: " ++ toilet.purpleProperties.uSED
+                    ]
                 , Card.text []
                     [ if toilet.purpleProperties.sIZE == " " then
                         text <| "Size: Not specified."
